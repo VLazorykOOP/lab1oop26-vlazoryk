@@ -3,13 +3,38 @@
 
 #include <iostream>
 #include <vector>
-//using namespace std;
+using namespace std;
+int ConsoleInputSizeArray(const int sizeMax)
+{
+    int size = 0;
+    do {
+        cout << " Input size Array ( 0< 1 < " << sizeMax << " ) ";
+        cin >> size;
+    } while (size <= 0 || size >= sizeMax);
+    return size;
+}
+int RndInputArray(int sizeMax, double A[])
+{
+    int size = ConsoleInputSizeArray(sizeMax);
+    int r1 = 0, r2 = 0;
+    srand(size);
+
+    for (int i = 0; i < size; i++) {
+        r1 = rand();
+        r2 = rand();
+        A[i] = 100.0 * r1;
+        A[i] = A[i] / (1.0 + r2);
+        cout << A[i] << "   ";
+    }
+    return size;
+}
 int main()
 {
     std::cout << "MyWork sey : Hello World!\n";
     std::vector<double> numbers; // пустий вектор
-    int k = 5; 
-    double tmp =0;
+    int k = 5;
+    double tmp = 0;
+    cout << " Input 5 number \n";
     for (int i = 0; i < k; i++)
     {
         std::cin >> tmp;
@@ -17,9 +42,23 @@ int main()
 
     }
     std::cout << std::endl;
-      for (double n : numbers)
-        std::cout << n << "\t"; 
+    for (double n : numbers)
+        std::cout << n << "\t";
     std::cout << std::endl;
+    // new example
+    double A[100];
+    int size = 100;
+   /* do {
+        cout << " Input size masive  \n";
+        cin >> size;
+    } while (size <= 0 || size > 100);
+    */
+    int ns = 0;
+    ns = RndInputArray(size, A);
+    for (int i = 0; i < ns; i++)
+        cout << A[i] << "\t\t";
+    std::cout << std::endl;
+
     return 0;
 }
 
