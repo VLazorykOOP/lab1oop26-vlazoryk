@@ -31,7 +31,7 @@ int RndInputArray(int sizeMax, double A[])
 int main()
 {
     std::cout << "MyWork sey : Hello World!\n";
-    std::vector<double> numbers; // пустий вектор
+    std::vector<double> numbers; // ГЇГіГ±ГІГЁГ© ГўГҐГЄГІГ®Г°
     int k = 5;
     double tmp = 0;
     cout << " Input 5 number \n";
@@ -57,7 +57,7 @@ int main()
     ns = RndInputArray(size, A);
     for (int i = 0; i < ns; i++)
         cout << A[i] << "\t\t";
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
