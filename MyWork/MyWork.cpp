@@ -2,11 +2,28 @@
 //
 
 #include <iostream>
-
+#include <vector>
+//using namespace std;
 int main()
 {
     std::cout << "MyWork sey : Hello World!\n";
+    std::vector<double> numbers; // пустий вектор
+    int k = 5; 
+    double tmp =0;
+    for (int i = 0; i < k; i++)
+    {
+        std::cin >> tmp;
+        numbers.push_back(tmp);
+
+    }
+    std::cout << std::endl;
+      for (double n : numbers)
+        std::cout << n << "\t"; 
+    std::cout << std::endl;
+    return 0;
 }
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
