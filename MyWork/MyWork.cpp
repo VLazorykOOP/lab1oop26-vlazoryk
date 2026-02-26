@@ -38,7 +38,7 @@ int main()
     for (int i = 0; i < k; i++)
     {
         std::cin >> tmp;
-        numbers.push_back(tmp);
+        numbers.push_back(tmp);    
 
     }
     std::cout << std::endl;
