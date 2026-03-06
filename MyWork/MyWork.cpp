@@ -30,6 +30,7 @@ int RndInputArray(int sizeMax, double A[])
 }
 int main()
 {
+    // 
     std::cout << "MyWork sey : Hello World!\n";
     std::vector<double> numbers; // ïóñòèé âåêòîð
     int k = 5;
